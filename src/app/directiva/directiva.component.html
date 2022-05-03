@@ -1,0 +1,16 @@
+<button (click)="SetMostrar()"
+        type="button"
+        class="btn btn-primary m-2">
+        {{habilitar == true ? 'Ocultar' : 'Mostrar'}}
+</button>
+
+<div class="card">
+  <div class="card-header">
+    <h2>Listado de coches</h2>
+    <ul *ngIf="habilitar" class="list-group">
+      <li *ngFor="let coche of listaCoches" class="list-group-item">
+        {{coche}}
+      </li>
+    </ul>
+  </div>
+</div>
